@@ -60,8 +60,9 @@ function the_goo_short_link(){
 
 function addGooLinkToContent($content){
 	global $GM;
+	$post_id = get_the_ID();
 	if ($GM->auto_show()){
-		$content .= the_goo_short_link();
+		$content .= get_goo_short_link($post_id);
 	}
 	return $content;
 }
