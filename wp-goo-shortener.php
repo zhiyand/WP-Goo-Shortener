@@ -49,11 +49,21 @@ function get_goo_short_link($post_id){
 }
 
 function the_goo_short_url(){
-	global $GM;
+	$post_id = get_the_ID();
+	echo get_goo_short_url($post_id);
 }
 
 function the_goo_short_link(){
+	$post_id = get_the_ID();
+	echo get_goo_short_link($post_id);
+}
+
+function addGooLinkToContent($content){
 	global $GM;
+	if ($GM->auto_show()){
+		$content .= the_goo_short_link();
+	}
+	return $content;
 }
 
 if (isset($GM)){
@@ -61,6 +71,7 @@ if (isset($GM)){
 	add_action('admin_menu','add_goo_shortener_options_page');
 	add_action('save_post', array(&$GM, 'addMeta'));
 	add_action('publish_post', array(&$GM, 'convertToGooUrl'));
+	add_filter('the_content', 'addGooLinkToContent');
 }
 
 ?>
