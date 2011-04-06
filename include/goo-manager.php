@@ -32,7 +32,7 @@ if (!class_exists('GooManager')){
 		
 		function getOptions(){
 			$gooDefaultOptions = array(
-				'autoShow' => 'true',
+				'autoShow' => true,
 				'format' => stripslashes('<span class="goo-short"><a href="%url">%text</a></span>'),
 			);
 			$options = get_option($this->optionsName);
@@ -60,9 +60,9 @@ if (!class_exists('GooManager')){
 			$options = $this->getOptions();
 			if (isset($_POST['update-options'])){
 				if (isset($_POST['autoShow'])){
-					$options['autoShow'] = (bool)true;
+					$options['autoShow'] = true;
 				} else {
-					$options['autoShow'] = (bool)false;
+					$options['autoShow'] = false;
 				}
 				
 				if (isset($_POST['format'])){
