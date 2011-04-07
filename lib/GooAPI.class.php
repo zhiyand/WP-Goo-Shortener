@@ -32,7 +32,7 @@ class GooAPI{
 		return $json->id;
 	}
 	
-	public function expend($short){
+	public function expand($short){
 		$short = trim($short);
 		$curlObj = curl_init();
 		$options = array(

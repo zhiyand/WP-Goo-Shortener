@@ -23,11 +23,11 @@ if (!class_exists('GooManager')){
 			return $this->goo->shorten($url);
 		}
 		
-		function expend($url){
+		function expand($url){
 			if(!$goo){
 				$this->init();
 			}
-			return $this->goo->expend($url);
+			return $this->goo->expand($url);
 		}
 		
 		function getOptions(){
