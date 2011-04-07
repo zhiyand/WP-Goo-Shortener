@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: WP Goo Shortener
-Plugin URI: http://www.pureweber.com
+Plugin URI: http://www.pureweber.com/wp-goo-shortener/
 Description: Google 短地址生成器，解析器。可以选择在文章末尾添加goo.gl短链接，并且可以在设置选项中自定义样式。如果需要将文章中的链接转换成goo.gl短链接，可以使用如下形式：[wpgoo]http://www.google.com[/wpgoo]。文章保存后该地址将会被转换成goo.gl短链接。
-Version: 0.1
+Version: 1.0
 Author: 7lemon
 Author URI: http://www.7lemon.net
 */
